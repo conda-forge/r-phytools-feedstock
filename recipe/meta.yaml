@@ -1,4 +1,4 @@
-{% set version = '0.7-47' %}
+{% set version = "0.7-70" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/phytools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/phytools/phytools_{{ version }}.tar.gz
-  sha256: feb1b0f042082a27b9cb9d2e1b121c8c46a560a7416404c29b3b92976ea94ca3
+  sha256: e3432c3b006e5cc6f1292bebd81ebc20044edf1f56c3d27a3497f738eb99f0d3
 
 build:
-  merge_build_host: True  # [win]
-  number: 1
+  merge_build_host: true  # [win]
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -66,25 +66,14 @@ test:
 about:
   home: http://github.com/liamrevell/phytools
   license: GPL-2.0-or-later
-  summary: A wide range of functions for phylogenetic analysis. Functionality is concentrated
-    in phylogenetic comparative biology, but also includes numerous methods for visualizing,
-    manipulating, reading or writing, and even inferring phylogenetic trees and data.
-    Included among the functions in phylogenetic comparative biology are various for
-    ancestral state reconstruction, model-fitting, simulation of phylogenies and data,
-    and multivariate analysis. There are a broad range of plotting methods for phylogenies
-    and comparative data which include, but are not restricted to, methods for mapping
-    trait evolution on trees, for projecting trees into phenotypic space or a geographic
-    map, and for visualizing correlated speciation between trees. Finally, there are
-    a number of functions for reading, writing, analyzing, inferring, simulating, and
-    manipulating phylogenetic trees and comparative data not covered by other packages.
-    For instance, there are functions for randomly or non-randomly attaching species
-    or clades to a phylogeny, for estimating supertrees or consensus phylogenies from
-    a set, for simulating trees and phylogenetic data under a range of models, and for
-    a wide variety of other manipulations and analyses that phylogenetic biologists
-    might find useful in their research.
+  summary: A wide range of functions for phylogenetic analysis. Functionality is concentrated in phylogenetic comparative biology, but also includes numerous methods for visualizing, manipulating, reading or writing, and even inferring phylogenetic trees and data. Included among the functions in phylogenetic comparative
+    biology are various for ancestral state reconstruction, model-fitting, simulation of phylogenies and data, and multivariate analysis. There are a broad range of plotting methods for phylogenies and comparative data which include, but are not restricted to, methods for mapping trait evolution on trees, for projecting
+    trees into phenotypic space or a geographic map, and for visualizing correlated speciation between trees. Finally, there are a number of functions for reading, writing, analyzing, inferring, simulating, and manipulating phylogenetic trees and comparative data not covered by other packages. For instance, there are functions
+    for randomly or non-randomly attaching species or clades to a phylogeny, for estimating supertrees or consensus phylogenies from a set, for simulating trees and phylogenetic data under a range of models, and for a wide variety of other manipulations and analyses that phylogenetic biologists might find useful in their
+    research.
   license_family: GPL2
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2
 
 extra:
   recipe-maintainers:
