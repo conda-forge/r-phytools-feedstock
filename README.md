@@ -5,11 +5,9 @@ Home: http://github.com/liamrevell/phytools
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-phytools-feedstock/blob/master/LICENSE.txt)
 
 Summary: A wide range of functions for phylogenetic analysis. Functionality is concentrated in phylogenetic comparative biology, but also includes numerous methods for visualizing, manipulating, reading or writing, and even inferring phylogenetic trees and data. Included among the functions in phylogenetic comparative biology are various for ancestral state reconstruction, model-fitting, simulation of phylogenies and data, and multivariate analysis. There are a broad range of plotting methods for phylogenies and comparative data which include, but are not restricted to, methods for mapping trait evolution on trees, for projecting trees into phenotypic space or a geographic map, and for visualizing correlated speciation between trees. Finally, there are a number of functions for reading, writing, analyzing, inferring, simulating, and manipulating phylogenetic trees and comparative data not covered by other packages. For instance, there are functions for randomly or non-randomly attaching species or clades to a phylogeny, for estimating supertrees or consensus phylogenies from a set, for simulating trees and phylogenetic data under a range of models, and for a wide variety of other manipulations and analyses that phylogenetic biologists might find useful in their research.
-
-
 
 Current build status
 ====================
@@ -38,6 +36,7 @@ Installing `r-phytools` from the `conda-forge` channel can be achieved by adding
 
 ```
 conda config --add channels conda-forge
+conda config --set channel_priority strict
 ```
 
 Once the `conda-forge` channel has been enabled, `r-phytools` can be installed with:
@@ -108,9 +107,9 @@ build distinct package versions.
 
 In order to produce a uniquely identifiable distribution:
  * If the version of a package **is not** being increased, please add or increase
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string).
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string).
  * If the version of a package **is** being increased, please remember to return
-   the [``build/number``](https://conda.io/docs/user-guide/tasks/build-packages/define-metadata.html#build-number-and-string)
+   the [``build/number``](https://docs.conda.io/projects/conda-build/en/latest/resources/define-metadata.html#build-number-and-string)
    back to 0.
 
 Feedstock Maintainers
