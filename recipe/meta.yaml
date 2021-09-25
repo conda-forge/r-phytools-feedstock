@@ -1,4 +1,4 @@
-{% set version = "0.7-80" %}
+{% set version = "0.7-90" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/phytools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/phytools/phytools_{{ version }}.tar.gz
-  sha256: 3742c3cabb25c864d6a16a91e2b2af918386542922880a00cae832b4f01782b2
+  sha256: 48615a709760af5f298f0af6615d238c96cad7d26e997fb65467520aad37e0d1
 
 build:
   merge_build_host: true  # [win]
