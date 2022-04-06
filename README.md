@@ -5,7 +5,7 @@ Home: http://github.com/liamrevell/phytools
 
 Package license: GPL-2.0-or-later
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-phytools-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-phytools-feedstock/blob/main/LICENSE.txt)
 
 Summary: A wide range of functions for phylogenetic analysis. Functionality is concentrated in phylogenetic comparative biology, but also includes numerous methods for visualizing, manipulating, reading or writing, and even inferring phylogenetic trees and data. Included among the functions in phylogenetic comparative biology are various for ancestral state reconstruction, model-fitting, simulation of phylogenies and data, and multivariate analysis. There are a broad range of plotting methods for phylogenies and comparative data which include, but are not restricted to, methods for mapping trait evolution on trees, for projecting trees into phenotypic space or a geographic map, and for visualizing correlated speciation between trees. Finally, there are a number of functions for reading, writing, analyzing, inferring, simulating, and manipulating phylogenetic trees and comparative data not covered by other packages. For instance, there are functions for randomly or non-randomly attaching species or clades to a phylogeny, for estimating supertrees or consensus phylogenies from a set, for simulating trees and phylogenetic data under a range of models, and for a wide variety of other manipulations and analyses that phylogenetic biologists might find useful in their research.
 
@@ -15,8 +15,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9927&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-phytools-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=9927&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/r-phytools-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -39,16 +39,41 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `r-phytools` can be installed with:
+Once the `conda-forge` channel has been enabled, `r-phytools` can be installed with `conda`:
 
 ```
 conda install r-phytools
 ```
 
-It is possible to list all of the versions of `r-phytools` available on your platform with:
+or with `mamba`:
+
+```
+mamba install r-phytools
+```
+
+It is possible to list all of the versions of `r-phytools` available on your platform with `conda`:
 
 ```
 conda search r-phytools --channel conda-forge
+```
+
+or with `mamba`:
+
+```
+mamba search r-phytools --channel conda-forge
+```
+
+Alternatively, `mamba repoquery` may provide more information:
+
+```
+# Search all versions available on your platform:
+mamba repoquery search r-phytools --channel conda-forge
+
+# List packages depending on `r-phytools`:
+mamba repoquery whoneeds r-phytools --channel conda-forge
+
+# List dependencies of `r-phytools`:
+mamba repoquery depends r-phytools --channel conda-forge
 ```
 
 
@@ -66,10 +91,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.
