@@ -23,37 +23,36 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-mass
-    - r-animation
     - r-ape >=4.0
     - r-clustergeneration
     - r-coda
     - r-combinat
     - r-expm
-    - r-gtools
     - r-maps
     - r-mnormt
     - r-nlme
     - r-numderiv
+    - r-optimparallel
     - r-phangorn >=2.3.1
     - r-plotrix
     - r-scatterplot3d
   run:
     - r-base
     - r-mass
-    - r-animation
     - r-ape >=4.0
     - r-clustergeneration
     - r-coda
     - r-combinat
     - r-expm
-    - r-gtools
     - r-maps
     - r-mnormt
     - r-nlme
     - r-numderiv
+    - r-optimparallel
     - r-phangorn >=2.3.1
     - r-plotrix
     - r-scatterplot3d
