@@ -27,11 +27,13 @@ requirements:
   host:
     - r-base
     - r-mass
-    - r-ape >=4.0
+    - r-ape >=5.7
     - r-clustergeneration
     - r-coda
     - r-combinat
+    - r-doparallel
     - r-expm
+    - r-foreach
     - r-maps
     - r-mnormt
     - r-nlme
@@ -43,11 +45,13 @@ requirements:
   run:
     - r-base
     - r-mass
-    - r-ape >=4.0
+    - r-ape >=5.7
     - r-clustergeneration
     - r-coda
     - r-combinat
+    - r-doparallel
     - r-expm
+    - r-foreach
     - r-maps
     - r-mnormt
     - r-nlme
