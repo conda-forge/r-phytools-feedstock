@@ -1,4 +1,4 @@
-{% set version = "2.4-4" %}
+{% set version = "2.5-2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/phytools_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/phytools/phytools_{{ version }}.tar.gz
-  sha256: 095e0448dcf1a97f96763ee8a8dd602e55a9133842e5514cd92af536236d45c4
+  sha256: 3c4facf55d3fffe97b9453bac3f6d398abed8b5896bc2b83bf6811957be27f01
 
 build:
   number: 0
